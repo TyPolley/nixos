@@ -10,6 +10,7 @@
     vagrant
     virt-manager
     vesktop
+    vencord
     # vim
     # wget
     spotify

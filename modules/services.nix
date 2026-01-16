@@ -9,6 +9,8 @@
     fi
   '';
 
+  services.timesyncd.enable = false;
+
   # Enable services here if/when needed:
   # services.openssh.enable = true;
 

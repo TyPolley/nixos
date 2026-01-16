@@ -10,6 +10,8 @@
       # thunderbird
       r2modman
       shotcut
+      obs-studio
+      vivaldi
     ];
   };
 
