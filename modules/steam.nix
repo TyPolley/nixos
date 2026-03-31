@@ -1,9 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  ############################
-  # Allow unfree (NVIDIA, Steam)
-  ############################
   nixpkgs.config.allowUnfree = true;
 
   ############################
@@ -18,9 +15,6 @@
   services.xserver.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
 
-  ############################
-  # NVIDIA driver
-  ############################
   hardware.nvidia = {
     modesetting.enable = true;
 
@@ -33,9 +27,6 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
-  ############################
-  # Graphics stack (MODERN)
-  ############################
   hardware.graphics = {
     enable = true;
 
@@ -52,27 +43,13 @@
       vulkan-loader
     ];
   };
-
-  ############################
-  # Steam (native NixOS)
-  ############################
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = false;
     dedicatedServer.openFirewall = false;
   };
-
-  ############################
-  # Environment
-  ############################
   environment.sessionVariables = {
     STEAM_EXTRA_COMPAT_TOOLS_PATHS =
       "$HOME/.steam/root/compatibilitytools.d";
   };
-
-  ############################
-  # NOTES
-  ############################
-  # - Use Plasma (X11), NOT Wayland
-  # - Do NOT set NIXOS_OZONE_WL for NVIDIA + OW2
 }

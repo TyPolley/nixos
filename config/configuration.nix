@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib , ... }:
 
 {
   imports = [
@@ -12,20 +12,19 @@
     ../modules/audio.nix
     ../modules/printing.nix
     ../modules/virtualization.nix
+
+    #Users
     ../modules/users.nix
     ../modules/packages.nix
     ../modules/services.nix
     ../modules/state.nix
     ../modules/steam.nix
+    ../modules/language.nix
+
 
 
   ];
-
-#  fileSystems."/mnt/games" = {
-#  device = "/dev/disk/by-label/GAMES";
-#  fsType = "ext4";
-#  };
-
+ 
   fileSystems."/games" = {
     device = "/dev/disk/by-uuid/69847de7-be1b-42e4-b161-e5f8f91068af";
     fsType = "ext4";

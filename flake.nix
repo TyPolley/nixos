@@ -31,9 +31,15 @@
       # Mismatched system dependencies will lead to crashes and other issues.
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix/24.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
-  outputs = { self, nixpkgs, home-manager, quickshell, kwin-effects-forceblur }:
+  outputs = inputs@{ self, nixpkgs, home-manager, quickshell, kwin-effects-forceblur , spicetify-nix , ...}:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -53,7 +59,13 @@
 
           {
 
-          home-manager.extraSpecialArgs = { inherit quickshell; };
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+
+          home-manager.extraSpecialArgs = { 
+            inherit inputs;
+            inherit quickshell;
+          };
           home-manager.users.yharnam = {
                 imports = [
                   #plasma-manager.homeModules.plasma-manager
@@ -66,10 +78,16 @@
                   ./home/quickshell
 
                   #Vesktop
-                  #./home/vesktop
+                  ./home/vesktop
+
+                  #Spotify
+                  ./home/spotify
+
+                  #Proton Plus
+                  ./home/protonPlus
                 ];
 
-              home.stateVersion = "23.11";
+              home.stateVersion = "24.11";
               };   
           }
 

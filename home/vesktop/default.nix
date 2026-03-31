@@ -1,6 +1,5 @@
 { inputs, pkgs, config, ... }:
 {
-  # Home Manager's Vesktop module
   programs.vesktop = {
     enable = true;
 
@@ -12,6 +11,9 @@
 
     # Vencord settings
     vencord.settings = {
+
+      enabledThemes = ["NotAnotherAnimeTheme.css"];
+
       plugins = {
         # Force animations to play on everything that uses animations.
         AlwaysAnimate = {
@@ -25,7 +27,7 @@
 
         # Folder management for servers in the sidebar
         BetterFolders = {
-          enabled = false;
+          enabled = true;
           sidebar = true;
           sidebarAnim = true;
 
@@ -165,5 +167,15 @@
         };
       };
     };
+        vencord.themes = {
+        "NotAnotherAnimeTheme.css" = ''
+          @import url("https://puckzxz.github.io/NotAnotherAnimeTheme/build/v3/naat.v3.css");
+
+          :root {
+            --theme-background-image: url("ttps://i.imgur.com/g8wXX43.jpeg");
+            /* --transparency: 0.15; */
+          }
+        '';
+      };
   };
 }

@@ -10,11 +10,18 @@
     vagrant
     virt-manager
     vesktop
-    vencord
+    discord
     # vim
     # wget
     spotify
     bottles
+    helvum
+    teams-for-linux
+    prismlauncher
+    yt-dlp
+    steamtinkerlaunch
+    protonplus
+    
   ];
 
   # --- PATCHES / NOTES --- ᕙ(⇀‸↼‶)ᕗ
