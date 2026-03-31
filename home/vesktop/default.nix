@@ -27,7 +27,7 @@
 
         # Folder management for servers in the sidebar
         BetterFolders = {
-          enabled = true;
+          enabled = false;
           sidebar = true;
           sidebarAnim = true;
 

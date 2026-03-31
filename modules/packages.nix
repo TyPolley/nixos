@@ -10,17 +10,13 @@
     vagrant
     virt-manager
     vesktop
-    discord
-    # vim
-    # wget
     spotify
     bottles
-    helvum
     teams-for-linux
     prismlauncher
     yt-dlp
-    steamtinkerlaunch
-    protonplus
+    comma
+
     
   ];
 

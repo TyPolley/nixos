@@ -3,15 +3,11 @@
 {
   nixpkgs.config.allowUnfree = true;
 
-  ############################
   # Boot / Kernel
-  ############################
   boot.initrd.kernelModules = [ "nvidia" ];
   boot.blacklistedKernelModules = [ "nouveau" ];
 
-  ############################
-  # X11 + NVIDIA (AMD CPU compatible)
-  ############################
+  # X11 + NVIDIA
   services.xserver.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
 

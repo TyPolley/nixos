@@ -9,30 +9,34 @@
     ../modules/networking.nix
     ../modules/locale.nix
     ../modules/desktop.nix
+    ../modules/sddm.nix
     ../modules/audio.nix
     ../modules/printing.nix
     ../modules/virtualization.nix
-
-    #Users
     ../modules/users.nix
     ../modules/packages.nix
     ../modules/services.nix
     ../modules/state.nix
     ../modules/steam.nix
-    ../modules/language.nix
-
 
 
   ];
- 
-  fileSystems."/games" = {
-    device = "/dev/disk/by-uuid/69847de7-be1b-42e4-b161-e5f8f91068af";
-    fsType = "ext4";
+
+  programs.git = {
+  enable = true;
+  config = {
+    user = {
+      name = "Ty Polley";
+      email = "polleyty21@gmail.com";
+      };
+    };
   };
 
-  swapDevices = [
-    { device = "/games/swapfile"; }
-  ];
+
+#  fileSystems."/mnt/games" = {
+#  device = "/dev/disk/by-label/GAMES";
+#  fsType = "ext4";
+#  };
 
 
   

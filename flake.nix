@@ -16,6 +16,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # KDE Plasma Specific
     kwin-effects-forceblur = {
       url = "github:taj-ny/kwin-effects-forceblur";
@@ -39,7 +44,7 @@
 
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, quickshell, kwin-effects-forceblur , spicetify-nix , ...}:
+  outputs = inputs@{ self, nixpkgs, home-manager, quickshell, kwin-effects-forceblur , spicetify-nix , nix-index-database , ...}:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -59,13 +64,7 @@
 
           {
 
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-
-          home-manager.extraSpecialArgs = { 
-            inherit inputs;
-            inherit quickshell;
-          };
+          home-manager.extraSpecialArgs = { inherit quickshell; };
           home-manager.users.yharnam = {
                 imports = [
                   #plasma-manager.homeModules.plasma-manager
@@ -85,6 +84,8 @@
 
                   #Proton Plus
                   ./home/protonPlus
+
+                  nix-index-database.homeModules.default
                 ];
 
               home.stateVersion = "24.11";
