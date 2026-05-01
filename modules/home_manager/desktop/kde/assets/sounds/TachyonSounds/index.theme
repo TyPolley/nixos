@@ -1,0 +1,7 @@
+[Sound Theme]
+Name=TachyonSounds
+Directories=stereo
+Comment=Windose 20 sound effects from Needy Girl Overdose/Needy Streamer Overload
+
+[stereo]
+OutputProfile=stereo
