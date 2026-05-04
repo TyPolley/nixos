@@ -1,3 +1,5 @@
+#THIS IS OLD, NOCTALIA IS IN HOME MANAGER.
+
 { self, inputs, ... }: {
   perSystem = { pkgs, ... }: {
     packages.myNoctalia = inputs.wrapper-modules.wrappers.noctalia-shell.wrap {

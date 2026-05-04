@@ -12,13 +12,5 @@
         '';
 
         services.timesyncd.enable = false;
-
-        # Enable services here if/when needed:
-        # services.openssh.enable = true;
-
-        # Firewall examples:
-        # networking.firewall.allowedTCPPorts = [ ... ];
-        # networking.firewall.allowedUDPPorts = [ ... ];
-        # networking.firewall.enable = false;  # not recommended
     };
 }
