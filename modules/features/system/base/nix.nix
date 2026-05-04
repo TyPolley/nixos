@@ -3,10 +3,10 @@
     flake.nixosModules.sysNix = { config, pkgs, ... }:
     {
         # Custom nixPath
-        nix.nixPath = [
-        "nixpkgs=${pkgs.path}"
-        "nixos-config=${config.system.build.toplevel}/etc/nixos/configuration.nix"
-        ];
+        # nix.nixPath = [
+        # "nixpkgs=${pkgs.path}"
+        # "nixos-config=${config.system.build.toplevel}/etc/nixos/configuration.nix"
+        # ];
 
         nix.settings.experimental-features = [ "nix-command" "flakes" ];
     };

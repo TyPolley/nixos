@@ -3,7 +3,7 @@
     flake.nixosModules.sysSDDM = { pkgs, ... }:
 
     let
-    background = ../../../assets/background.png;
+    background = ../../../../assets/background.png;
     # midGif = ../assets/mid.gif;
 
     # # Gold color palette

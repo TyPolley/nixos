@@ -10,6 +10,9 @@
       spotify
       teams-for-linux
       prismlauncher
+      r2modman
+      obs-studio
+      discord
     ];
   };
 }
