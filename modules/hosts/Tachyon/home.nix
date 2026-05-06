@@ -8,6 +8,7 @@
       self.homeModules.hmNoctalia
       self.homeModules.hmGit
       self.homeModules.hmKDE
+      self.homeModules.hmKvantum
       inputs.nix-index-database.homeModules.default
     ];
 

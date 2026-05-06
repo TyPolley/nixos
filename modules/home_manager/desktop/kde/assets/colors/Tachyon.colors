@@ -2,23 +2,23 @@
 Name=Tachyon
 
 [Colors:Window]
-BackgroundNormal=12,10,18
-ForegroundNormal=230,220,255
+BackgroundNormal=0,0,0
+ForegroundNormal=232,216,255
 
 [Colors:View]
-BackgroundNormal=18,14,28
-ForegroundNormal=220,210,245
+BackgroundNormal=17,13,26
+ForegroundNormal=232,216,255
 
 [Colors:Button]
-BackgroundNormal=38,28,58
-ForegroundNormal=230,220,255
+BackgroundNormal=76,58,112
+ForegroundNormal=232,216,255
 
 [Colors:Selection]
-BackgroundNormal=122,92,200
+BackgroundNormal=181,143,255
 ForegroundNormal=0,0,0
 
 [WM]
-activeBackground=26,18,40
-activeForeground=230,220,255
-inactiveBackground=15,12,22
-inactiveForeground=150,140,180
+activeBackground=17,13,26
+activeForeground=232,216,255
+inactiveBackground=0,0,0
+inactiveForeground=181,143,255

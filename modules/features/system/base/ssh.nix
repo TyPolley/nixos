@@ -9,7 +9,7 @@
 
     keys = builtins.fetchurl {
       url = "https://github.com/TyPolley.keys";
-      sha256 = "sha256-REPLACE_ME";
+      sha256 = "0a2na1jg1kl5vvwy5sf2gcnc4a53a84qngcr0av5xpmdf1lyfc0d";
     };
   in
   {
