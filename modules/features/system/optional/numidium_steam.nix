@@ -13,7 +13,7 @@
       open = false;
       nvidiaSettings = true;
 
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      package = config.boot.kernelPackages.nvidiaPackages.production;
     };
 
     hardware.graphics = {
@@ -22,7 +22,7 @@
 
       extraPackages = with pkgs; [
         vulkan-loader
-        vulkan-validation-layers
+        # vulkan-validation-layers
       ];
 
       extraPackages32 = with pkgs.pkgsi686Linux; [

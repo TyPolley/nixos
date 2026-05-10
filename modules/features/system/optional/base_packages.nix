@@ -8,6 +8,7 @@
       wget
       comma
       yt-dlp
+      ffmpeg
     ];
   };
 }

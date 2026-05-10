@@ -42,6 +42,7 @@
 
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
+        home-manager.backupFileExtension = "backup";
         home-manager.extraSpecialArgs = { inherit self inputs; };
 
         home-manager.users.yharnam = self.homeModules.NumidiumHome;
