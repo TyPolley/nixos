@@ -8,6 +8,9 @@
         # "nixos-config=${config.system.build.toplevel}/etc/nixos/configuration.nix"
         # ];
 
+        
+        nixpkgs.config.allowUnfree = true;
+
         nix.settings.experimental-features = [ "nix-command" "flakes" ];
     };
 

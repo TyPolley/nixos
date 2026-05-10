@@ -12,5 +12,6 @@
         '';
 
         services.timesyncd.enable = false;
+        
     };
 }

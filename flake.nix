@@ -8,6 +8,8 @@
 
     wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
 
+    vscode-server.url = "github:nix-community/nixos-vscode-server";
+
     # KDE Plasma Specific
     kwin-effects-forceblur = {
       url = "github:taj-ny/kwin-effects-forceblur";

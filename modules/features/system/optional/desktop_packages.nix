@@ -3,7 +3,6 @@
 {
   flake.nixosModules.sysDesktopPackages = { pkgs, ... }: {
     environment.systemPackages = with pkgs; [
-      vscode
       obsidian
       virt-manager
       vesktop

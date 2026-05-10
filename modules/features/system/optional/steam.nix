@@ -2,7 +2,6 @@
 
 {
   flake.nixosModules.sysSteam = { pkgs, ... }: {
-    nixpkgs.config.allowUnfree = true;
 
     hardware.graphics = {
       enable = true;

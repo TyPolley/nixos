@@ -21,7 +21,7 @@
       services.openssh.enable = true;
 
       services.openssh.settings = {
-        PermitRootLogin = lib.mkForce "no";
+        PermitRootLogin = mkForce "no";
         PasswordAuthentication = false;
         KbdInteractiveAuthentication = false;
         LogLevel = "VERBOSE";
