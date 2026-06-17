@@ -1,7 +1,7 @@
 { self, inputs, ... }:
 
 {
-  flake.nixosModules.sysWireguardClient = { config, pkgs, lib, ... }:
+  flake.nixosModules.x = { config, pkgs, lib, ... }:
 
   with lib;
   let
